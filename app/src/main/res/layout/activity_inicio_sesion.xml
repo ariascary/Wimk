@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cap.aplication.wimk.InicioSesion">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/wink"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/impact"
+            android:text="@string/app_name"
+            android:textColor="@color/darkblue"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.021" />
+
+        <Button
+            android:id="@+id/registro2"
+            android:layout_width="153dp"
+            android:layout_height="53dp"
+            android:fontFamily="sans-serif-light"
+            android:includeFontPadding="false"
+            android:text="@string/ingresar"
+            android:textColor="@color/lightblue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:backgroundTint="@color/darkblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.744"
+            app:strokeColor="@color/lightblue"
+            tools:fontFamily="@font/letra" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="236dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="28dp"
+            android:background="#8BCDDAEF"
+            app:boxBackgroundColor="#1F4E79"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:helperText="@string/nombreusuario"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/darkblue"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="239dp"
+            android:layout_height="56dp"
+            android:background="#A3CDDAEF"
+            android:ems="10"
+            android:fontFamily="@font/letra"
+            android:hint="@string/contrasena"
+            android:textColorHint="@color/darkblue"
+            android:inputType="textPassword"
+            android:password="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"
+            tools:layout_editor_absoluteY="337dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/imageButton30"
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:padding="0.1dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ajuste"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton31"
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:padding="0.1dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/flecha"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/letra"
+            android:text="@string/recordarcontra"
+            android:textColor="@color/darkblue"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="425dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/letra"
+            android:text="@string/inicioSesion"
+            android:textColor="@color/darkblue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/letra"
+            android:text="@string/olvidocontra"
+            android:textColor="@color/darkblue"
+            android:textSize="10sp"
+            app:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="425dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

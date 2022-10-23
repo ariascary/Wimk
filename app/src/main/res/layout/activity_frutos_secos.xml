@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cap.aplication.wimk.PantallaInicio">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/registro3"
+            android:layout_width="131dp"
+            android:layout_height="53dp"
+            android:fontFamily="@font/letra"
+            android:includeFontPadding="false"
+            android:text="@string/Listo"
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:backgroundTint="@color/lightblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976"
+            app:strokeColor="@color/lightblue"
+            tools:fontFamily="@font/letra" />
+
+        <TextView
+            android:id="@+id/wink"
+            android:layout_width="113dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/impact"
+            android:text="@string/app_name"
+            android:textColor="@color/darkblue"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.021" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:fontFamily="@font/letra"
+            android:text="@string/FrutosSecos"
+            android:textColor="@color/darkblue"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="402dp"
+            android:layout_height="430dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:contentDescription="@string/Lechuga"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="192dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <CheckBox
+                    android:id="@+id/checkBox24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Almendras"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox49"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Avellanas"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Anacardos"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox51"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Cacahuetes"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox52"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Castañas"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox53"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Nueces"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox54"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Piñones"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox57"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Pistachos"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox58"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Avena"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Trigo"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox59"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/SemillasGirasol"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox61"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/SemillaCalabaza"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox62"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Centeno"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox63"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Quinoa"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox64"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Espelta"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox65"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Maiz"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+                <CheckBox
+                    android:id="@+id/checkBox66"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/letra"
+                    android:text="@string/Arroz"
+                    android:textColor="@color/darkblue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/darkblue" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
