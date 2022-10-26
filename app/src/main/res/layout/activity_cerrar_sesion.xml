@@ -19,42 +19,25 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/wink"
-            android:layout_width="113dp"
-            android:layout_height="54dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/impact"
-            android:text="@string/app_name"
-            android:textColor="@color/darkblue"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.021" />
-
-        <TextView
             android:id="@+id/textView10"
-            android:layout_width="301dp"
-            android:layout_height="136dp"
-            android:layout_marginTop="252dp"
+            android:layout_width="309dp"
+            android:layout_height="165dp"
             android:fontFamily="@font/impact"
             android:text="@string/CerrarSesion"
             android:textAlignment="center"
             android:textColor="@color/darkblue"
             android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.372" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="92dp"
-            android:layout_marginBottom="256dp"
             android:fontFamily="@font/letra"
             android:text="@string/Si"
             android:textColor="@color/darkblue"
@@ -63,16 +46,16 @@
             app:backgroundTint="@color/lightblue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button3"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.031"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.625"
             tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="88dp"
-            android:layout_marginBottom="256dp"
             android:fontFamily="@font/letra"
             android:text="@string/No"
             android:textColor="@color/darkblue"
@@ -80,7 +63,11 @@
             android:textStyle="bold"
             app:backgroundTint="@color/lightblue"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.755"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.625" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
