@@ -149,6 +149,16 @@
     <string name="Etiquetas">Añadir etiquetas </string>
     <string name="CambiarPrefe">Cambiar preferencias</string>
     <string name="ModificarRece">Modificar recetas</string>
+    <string name="Duracion">Duración máxima de la receta</string>
+    <string name="Kcal">Kcal máximas</string>
+    <string name="ReceVege">Receta Vegetariana</string>
+    <string name="ReceVega">Receta Vegana</string>
+    <string name="ReceNormal">Receta ni vegetariana ni vegana</string>
+    <string name="PlatoPrin">Es un plato principal</string>
+    <string name="Postre">Es un postre</string>
+    <string name="SoloPlatoPrin">Solo platos principales</string>
+    <string name="SoloPostre">Solo postres</string>
+    <string name="Ambas">Recetas vegetarianas y veganas</string>
 
 
 

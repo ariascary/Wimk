@@ -28,19 +28,19 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
 
         Button buscaIngre = (Button)  findViewById(R.id.button9);
         buscaIngre.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Home_fragment.class);
+            Intent intencion = new Intent(getApplicationContext(), Buscar_ingredientes.class);
             startActivity(intencion);
         });
 
         Button crearRece = (Button)  findViewById(R.id.button10);
         crearRece.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Gallery_Fragment.class);
+            Intent intencion = new Intent(getApplicationContext(), Crear_receta.class);
             startActivity(intencion);
         });
 
         Button perfil = (Button)  findViewById(R.id.button11);
         perfil.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Slideshow_Fragment.class);
+            Intent intencion = new Intent(getApplicationContext(), Perfil.class);
             startActivity(intencion);
         });
 

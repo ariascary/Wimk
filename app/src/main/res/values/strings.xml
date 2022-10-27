@@ -149,19 +149,16 @@
     <string name="Etiquetas">Add tags</string>
     <string name="CambiarPrefe">Change preferences</string>
     <string name="ModificarRece">Modify recipes</string>
-    <string name="title_activity_recetas_ingredientes">RecetasIngredientes</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Duracion">Maximum duration of the cooking recipe</string>
+    <string name="Kcal">how many calories does it have?</string>
+    <string name="ReceVege">Vegetarian Recipe</string>
+    <string name="ReceVega">Vegan recipe</string>
+    <string name="ReceNormal">Neither vegetarian nor vegan recipe</string>
+    <string name="PlatoPrin">It is a main dish</string>
+    <string name="Postre">It is a dessert</string>
+    <string name="SoloPlatoPrin">Only main dish</string>
+    <string name="SoloPostre">Only desserts</string>
+    <string name="Ambas">Vegan and vegetarian recipes</string>
 
 
 </resources>

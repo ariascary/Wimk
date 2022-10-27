@@ -5,9 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" >
+    tools:context="cap.aplication.wimk.Buscar_ingredientes" >
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/app_description"
@@ -15,23 +16,6 @@
         android:src="@drawable/fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/wink"
-        android:layout_width="113dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/impact"
-        android:text="@string/app_name"
-        android:textColor="@color/darkblue"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
 
     <ImageButton
         android:id="@+id/imageButton100"
@@ -48,16 +32,19 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="404dp"
         android:layout_height="309dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:contentDescription="@string/Lechuga"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="235dp">
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.578"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,16 +122,18 @@
 
     <TextView
         android:id="@+id/text_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_width="348dp"
+        android:layout_height="97dp"
         android:fontFamily="@font/letra"
         android:text="@string/EligeIngre"
+        android:textAlignment="center"
         android:textColor="@color/darkblue"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/button19"

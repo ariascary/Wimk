@@ -42,11 +42,11 @@
             android:textColor="@color/darkblue"
             app:layout_constraintBottom_toTopOf="@+id/switch1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.687"
+            app:layout_constraintHorizontal_bias="0.582"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.238"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            app:layout_constraintVertical_bias="0.222"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView3"
@@ -201,10 +201,9 @@
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toTopOf="@+id/registro22"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.837"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.987"
+            app:layout_constraintVertical_bias="0.973"
             tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
