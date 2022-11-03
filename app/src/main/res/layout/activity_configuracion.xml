@@ -33,21 +33,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="69dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="248dp"
-            android:textAlignment="viewStart"
-            android:textColor="@color/darkblue"
-            app:layout_constraintBottom_toTopOf="@+id/switch1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.582"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.222"
-            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -192,19 +177,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/inlesbandera"
             tools:ignore="SpeakableTextPresentCheck" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="71dp"
-            android:layout_height="46dp"
-            android:layout_marginBottom="288dp"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@+id/registro22"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.973"
-            tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
