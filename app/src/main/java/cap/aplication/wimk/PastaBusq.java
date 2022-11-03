@@ -17,7 +17,7 @@ public class PastaBusq extends AppCompatActivity implements View.OnClickListener
 
         Button listo = (Button) findViewById(R.id.button444);
         listo.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Alergenos.class);
+            Intent intencion = new Intent(getApplicationContext(), Buscar_ingredientes.class);
             startActivity(intencion);
         });
     }
