@@ -82,7 +82,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/correo"
             android:layout_width="314dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
@@ -96,11 +96,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
+            app:layout_constraintTop_toBottomOf="@+id/nombreuserregis"
             tools:ignore="TextContrastCheck" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/contrasena"
             android:layout_width="312dp"
             android:layout_height="45dp"
             android:background="#A3CDDAEF"
@@ -117,12 +117,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.525"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/correo"
             app:layout_constraintVertical_bias="0.06"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/repetircontra"
             android:layout_width="312dp"
             android:layout_height="45dp"
             android:background="#A3CDDAEF"
@@ -137,14 +137,14 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.793"
+            app:layout_constraintVertical_bias="0.74"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+            android:id="@+id/nombreuserregis"
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
@@ -159,11 +159,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.432"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
+            app:layout_constraintTop_toBottomOf="@+id/apellidos"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText3"
+            android:id="@+id/nombre"
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
@@ -182,7 +182,7 @@
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText2"
+            android:id="@+id/apellidos"
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
@@ -197,7 +197,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.407"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
+            app:layout_constraintTop_toBottomOf="@+id/nombre"
             tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class Pantalla_Bienve extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //setTheme(R.style.Theme_Wimk); con esto debería funcionar para que salga la pantalla de carga, cambios en manager, themes
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regis_bienve);
 

@@ -18,6 +18,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Wimk.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,8 +32,9 @@
         <activity
             android:name=".InicioSesion"
             android:exported="true"
-            android:theme="@style/Theme.Wimk.NoActionBar">
-            <meta-data
+            android:theme="@style/SplashTheme">
+
+        <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>

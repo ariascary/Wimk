@@ -97,7 +97,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/editText3"
             android:layout_width="318dp"
             android:layout_height="49dp"
@@ -116,7 +116,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/editText4"
             android:layout_width="319dp"
             android:layout_height="130dp"

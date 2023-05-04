@@ -10,13 +10,24 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        setTheme(R.style.Theme_Wimk);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        /*String analytics:FirebaseAnalytics= FirebaseAnalytics.getInstance(this);
+        var bundle= Bundle();
+        bundle.putString("message", "Integración Firebase");
+        analytics.logEvent("InitScreen", bundle);*/
 
         Button boton1 = (Button)  findViewById(R.id.inicioSesion);
         boton1.setOnClickListener(view -> {

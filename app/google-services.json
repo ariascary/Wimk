@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "989367209426",
+    "project_id": "wink-app29",
+    "storage_bucket": "wink-app29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989367209426:android:37883a11fa576c73e94c0b",
+        "android_client_info": {
+          "package_name": "cap.aplication.wimk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989367209426-d7ucte0pcvro4k7t94i5g6iiu60sdoit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIocwuUxxWnjkIu3rBaSuJpzdfmET-rYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989367209426-d7ucte0pcvro4k7t94i5g6iiu60sdoit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
