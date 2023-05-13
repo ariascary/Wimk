@@ -159,11 +159,9 @@
     <string name="SoloPlatoPrin">Solo platos principales</string>
     <string name="SoloPostre">Solo postres</string>
     <string name="Ambas">Recetas vegetarianas y veganas</string>
-
-
-
-
-
+    <string name="Enviar_email">Enviar email</string>
+    <string name="Introduzca_un_email">Te enviaremos un email con instrucciones para recuperarla</string>
+    <string name="Recuperar_contrasena">Recuperar contraseña</string>
 
 
 </resources>

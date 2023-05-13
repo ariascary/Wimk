@@ -12,15 +12,15 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,24 +34,23 @@ public class Registro extends AppCompatActivity implements View.OnClickListener{
     EditText contrasena;
     EditText repetircontra;
     Button crearPerfil;
-    FirebaseAuth nAuth;
-    FirebaseFirestore firestone;
+    FirebaseAuth mAuth;
+    //FirebaseFirestore firestone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        //imageButton51 = findViewById(R.id.imageButton51);
         nombre = findViewById(R.id.nombre);
         apellidos = findViewById(R.id.apellidos);
         nombreuserregis= findViewById(R.id.nombreuserregis);
         correo= findViewById(R.id.correo);
-        contrasena= findViewById(R.id.contrasena);
+        contrasena= findViewById(R.id.contrasenalogin);
         repetircontra= findViewById(R.id.repetircontra);
         crearPerfil= findViewById(R.id.registro2);
-        nAuth= FirebaseAuth.getInstance();
-        firestone= FirebaseFirestore.getInstance();
+        mAuth= FirebaseAuth.getInstance();
+        //firestone= FirebaseFirestore.getInstance();
 
 
 
@@ -110,12 +109,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void createUser(String nombreUser, String apellidoslUser, String nameUser, String emailUser, String contrasenaUser, String repetircontraUser) {
-       nAuth.createUserWithEmailAndPassword(emailUser, contrasenaUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(emailUser, contrasenaUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    String id = nAuth.getCurrentUser().getUid();
+                    String id = mAuth.getCurrentUser().getUid();
                     Map<String , Object> map = new HashMap<>();
                     map.put("id", id);
                     map.put("name", nombreUser);
@@ -124,15 +123,17 @@ public class Registro extends AppCompatActivity implements View.OnClickListener{
                     map.put("email", emailUser);
                     map.put("password", contrasenaUser);
                     map.put("passwordagain", repetircontraUser);
-                    firestone.collection("Users").document(id).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                   // firestone.collection("Users").document(id).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    FirebaseDatabase.getInstance().getReference("Users")
+                            .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
+
                                 Intent i = new Intent(Registro.this, InicioSesion.class);
                                 startActivity(i);
                                 Toast.makeText(Registro.this, "Usuario almacenado correctamente", Toast.LENGTH_SHORT).show();
 
-                            }
+
                         }
                     });
                 }else{

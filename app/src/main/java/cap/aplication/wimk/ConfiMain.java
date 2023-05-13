@@ -1,7 +1,10 @@
 package cap.aplication.wimk;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,6 +17,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Locale;
+
+import io.grpc.internal.SharedResourceHolder;
 
 public class ConfiMain extends AppCompatActivity implements View.OnClickListener{
     @Override
@@ -22,17 +30,41 @@ public class ConfiMain extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_configuracion);
 
 
-        ImageButton Confi = (ImageButton)  findViewById(R.id.imageButton21);
-        Confi.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), VolverMain.class);
-            startActivity(intencion);
-        });
 
         Button guardar = (Button)  findViewById(R.id.registro22);
         guardar.setOnClickListener(view -> {
             Intent intencion = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intencion);
         });
+
+        ((ImageButton) findViewById(R.id.imageButton20)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Resources res= ConfiMain.this.getResources();
+                DisplayMetrics dm = res.getDisplayMetrics();
+                Configuration conf = res.getConfiguration();
+                conf.locale= new Locale("es");
+                res.updateConfiguration(conf, dm);
+
+                ConfiMain.this.recreate();
+
+            }
+        });
+
+        ((ImageButton) findViewById(R.id.imageButton23)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Resources res= ConfiMain.this.getResources();
+                DisplayMetrics dm = res.getDisplayMetrics();
+                Configuration conf = res.getConfiguration();
+                conf.locale= new Locale("en");
+                res.updateConfiguration(conf, dm);
+
+                ConfiMain.this.recreate();
+
+            }
+        });
+
 
     }
 

@@ -159,6 +159,9 @@
     <string name="SoloPlatoPrin">Only main dish</string>
     <string name="SoloPostre">Only desserts</string>
     <string name="Ambas">Vegan and vegetarian recipes</string>
+    <string name="Enviar_email">Sent email</string>
+    <string name="Introduzca_un_email">We will send you an email with instructions to recover it</string>
+    <string name="Recuperar_contrasena">Recover password</string>
 
 
 </resources>

@@ -104,10 +104,10 @@
             android:progress="3"
             app:layout_constraintBottom_toTopOf="@+id/registro22"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:layout_constraintVertical_bias="0.152" />
+            app:layout_constraintVertical_bias="0.173" />
 
         <ImageButton
             android:id="@+id/imageButton20"
@@ -127,20 +127,6 @@
             app:srcCompat="@drawable/espanabandera"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageButton
-            android:id="@+id/imageButton21"
-            android:layout_width="68dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="12dp"
-            android:padding="0.1dp"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/flecha"
-            tools:ignore="SpeakableTextPresentCheck" />
-
 
         <Button
             android:id="@+id/registro22"
@@ -156,10 +142,10 @@
             app:backgroundTint="@color/darkblue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.952"
+            app:layout_constraintHorizontal_bias="0.941"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.982"
+            app:layout_constraintVertical_bias="0.957"
             app:strokeColor="@color/lightblue"
             tools:fontFamily="@font/letra" />
 

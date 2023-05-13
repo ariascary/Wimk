@@ -21,61 +21,23 @@
 
         <Button
             android:id="@+id/registro2"
-            android:layout_width="153dp"
-            android:layout_height="53dp"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
             android:fontFamily="sans-serif-light"
             android:includeFontPadding="false"
-            android:text="@string/ingresar"
+            android:text="@string/Enviar_email"
             android:textColor="@color/lightblue"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:typeface="normal"
             app:backgroundTint="@color/darkblue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.839"
             app:strokeColor="@color/lightblue"
             tools:fontFamily="@font/letra" />
-
-        <EditText
-            android:id="@+id/contrasenalogin"
-            android:layout_width="240dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="336dp"
-            android:background="#A3CDDAEF"
-            android:ems="10"
-            android:fontFamily="@font/letra"
-            android:hint="@string/contrasena"
-            android:inputType="textPassword"
-            android:password="true"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textColorHint="@color/darkblue"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/registro2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.008"
-            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/imageButton30"
-            android:layout_width="68dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="193dp"
-            android:layout_marginBottom="16dp"
-            android:padding="0.1dp"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.953"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button"
-            app:srcCompat="@drawable/ajuste"
-            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imageButton31"
@@ -91,43 +53,28 @@
             app:srcCompat="@drawable/flecha"
             tools:ignore="SpeakableTextPresentCheck" />
 
+
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/emailolvidcontra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="112dp"
             android:fontFamily="@font/letra"
-            android:text="@string/inicioSesion"
+            android:text="@string/Recuperar_contrasena"
             android:textColor="@color/darkblue"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:fontFamily="@font/letra"
-            android:text="@string/olvidocontra"
-            android:textColor="@color/darkblue"
-            android:textSize="10sp"
-            app:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/registro2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contrasenalogin"
-            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/nombreuserlogin"
             android:layout_width="236dp"
             android:layout_height="51dp"
-            android:layout_marginTop="248dp"
+            android:layout_marginTop="328dp"
             android:background="#ADCDDAEF"
             android:ems="10"
             android:fontFamily="@font/letra"
@@ -135,11 +82,27 @@
             android:inputType="textEmailAddress"
             android:textColorHint="@color/darkblue"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/registro2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="516dp"
+            android:text="@string/Introduzca_un_email"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailolvidcontra"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

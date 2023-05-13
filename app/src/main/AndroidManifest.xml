@@ -47,6 +47,14 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Olvidado_contraseña"
+            android:exported="true"
+            android:theme="@style/Theme.Wimk.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Registro"
             android:exported="true">
             <meta-data

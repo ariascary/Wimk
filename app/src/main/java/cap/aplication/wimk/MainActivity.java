@@ -24,10 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTheme(R.style.Theme_Wimk);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*String analytics:FirebaseAnalytics= FirebaseAnalytics.getInstance(this);
-        var bundle= Bundle();
-        bundle.putString("message", "Integración Firebase");
-        analytics.logEvent("InitScreen", bundle);*/
 
         Button boton1 = (Button)  findViewById(R.id.inicioSesion);
         boton1.setOnClickListener(view -> {
