@@ -17,8 +17,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="210dp"
-        android:layout_height="127dp"
+        android:layout_width="223dp"
+        android:layout_height="135dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/impact"
@@ -28,10 +28,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/inicioSesion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.481" />
 
     <Button
             android:id="@+id/inicioSesion"

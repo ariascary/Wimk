@@ -56,7 +56,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener{
 
         ImageButton flecha1 = (ImageButton)  findViewById(R.id.imageButton51);
         flecha1.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intencion = new Intent(getApplicationContext(), ArrancaApp.class);
             startActivity(intencion);
         });
 

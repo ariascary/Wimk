@@ -30,7 +30,7 @@ public class InicioSesion extends AppCompatActivity implements View.OnClickListe
 
         ImageButton flecha1 = (ImageButton)  findViewById(R.id.imageButton31);
         flecha1.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intencion = new Intent(getApplicationContext(), ArrancaApp.class);
             startActivity(intencion);
         });
 

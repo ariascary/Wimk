@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -14,39 +15,31 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        private static final int SPLASH_DELAY = 2000; // Tiempo de duración de la pantalla de carga en milisegundos
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_pantallacarga);
+
+            // Retraso para mostrar la pantalla de carga
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Iniciar la actividad principal después del tiempo de retraso
+                    Intent intent = new Intent(MainActivity.this, ArrancaApp.class); // Reemplaza HomeActivity con la actividad principal de tu aplicación
+                    startActivity(intent);
+                    finish();
+                }
+            }, SPLASH_DELAY);
         }
-        setTheme(R.style.Theme_Wimk);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        Button boton1 = (Button)  findViewById(R.id.inicioSesion);
-        boton1.setOnClickListener(view -> {
-          Intent intencion = new Intent(getApplicationContext(), InicioSesion.class);
-          startActivity(intencion);
-        });
 
-        ImageButton Imagenboton3 = (ImageButton)  findViewById(R.id.imageButton2);
-        Imagenboton3.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), ConfiMain.class);
-            startActivity(intencion);
-        });
-
-        Button boton2 = (Button)  findViewById(R.id.registro);
-        boton2.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Registro.class);
-            startActivity(intencion);
-        });
-
-    }
 
     @Override
     public void onClick(View view) {
 
     }
 }
+
+

@@ -162,6 +162,8 @@
     <string name="Enviar_email">Enviar email</string>
     <string name="Introduzca_un_email">Te enviaremos un email con instrucciones para recuperarla</string>
     <string name="Recuperar_contrasena">Recuperar contraseña</string>
+    <string name="Aumentarletra">+ Aumentar el tamaño de la letra</string>
+    <string name="Disminuirletra">-Disminuir el tamaño de la letra</string>
 
 
 </resources>

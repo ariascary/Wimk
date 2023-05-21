@@ -126,7 +126,7 @@
             android:id="@+id/checkBox6559"
             android:layout_width="330dp"
             android:layout_height="53dp"
-            android:layout_marginTop="368dp"
+            android:layout_marginTop="380dp"
             android:fontFamily="@font/letra"
             android:text="@string/PlatoPrin"
             android:textAlignment="textStart"
@@ -135,6 +135,7 @@
             android:textStyle="bold"
             app:buttonTint="@color/darkblue"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

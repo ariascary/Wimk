@@ -162,6 +162,8 @@
     <string name="Enviar_email">Sent email</string>
     <string name="Introduzca_un_email">We will send you an email with instructions to recover it</string>
     <string name="Recuperar_contrasena">Recover password</string>
+    <string name="Aumentarletra">+Increase font size</string>
+    <string name="Disminuirletra">-Decrease the font size</string>
 
 
 </resources>

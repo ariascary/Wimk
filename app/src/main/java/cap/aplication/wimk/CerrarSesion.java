@@ -33,7 +33,7 @@ public class CerrarSesion extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
-                Intent intencion = new Intent(CerrarSesion.this, MainActivity.class);
+                Intent intencion = new Intent(CerrarSesion.this, ArrancaApp.class);
                 startActivity(intencion);
                 finish();
                 Toast.makeText(CerrarSesion.this, "Has cerrado sesión", Toast.LENGTH_SHORT);
