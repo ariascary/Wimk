@@ -22,11 +22,19 @@ import android.widget.ImageButton;
 import java.util.Locale;
 
 public class ConfiPrincipal extends AppCompatActivity implements View.OnClickListener{
+
+    private boolean aumentarLetra = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
 
+        Button btnAumentarLetra = findViewById(R.id.btn_aumentar_letra);
+        Button btnDisminuirLetra = findViewById(R.id.btn_disminuir_letra);
+
+        btnAumentarLetra.setOnClickListener(this);
+        btnDisminuirLetra.setOnClickListener(this);
 
 
         Button guardar = (Button)  findViewById(R.id.registro22);
@@ -65,9 +73,39 @@ public class ConfiPrincipal extends AppCompatActivity implements View.OnClickLis
 
     }
 
-
     @Override
     public void onClick(View view) {
+        if (view.getId() == R.id.btn_aumentar_letra) {
+            // Cambiar el estado de aumentarLetra
+            aumentarLetra = !aumentarLetra;
 
+            // Obtener la configuración actual
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+
+            // Modificar la escala de la fuente
+            conf.fontScale = aumentarLetra ? 1.35f : 1.0f;
+
+            // Actualizar la configuración y recrear la actividad
+            res.updateConfiguration(conf, dm);
+            recreate();
+        } else if (view.getId() == R.id.btn_disminuir_letra) {
+            // Cambiar el estado de aumentarLetra
+            aumentarLetra = !aumentarLetra;
+
+            // Obtener la configuración actual
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+
+            // Modificar la escala de la fuente
+            conf.fontScale = aumentarLetra ? 1.1f : 0.8f; // Ajusta los valores según tus necesidades
+
+            // Actualizar la configuración y recrear la actividad
+            res.updateConfiguration(conf, dm);
+            recreate();
+        }
     }
 }
+

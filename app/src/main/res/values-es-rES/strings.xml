@@ -164,6 +164,8 @@
     <string name="Recuperar_contrasena">Recuperar contraseña</string>
     <string name="Aumentarletra">+ Aumentar el tamaño de la letra</string>
     <string name="Disminuirletra">-Disminuir el tamaño de la letra</string>
+    <string name="Introduceingre">Introduce los ingredientes</string>
+    <string name="instruccionesIngredientes">"Introduce los ingredientes que tenga la receta separados por comas "</string>
 
 
 </resources>

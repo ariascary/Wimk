@@ -164,6 +164,12 @@
     <string name="Recuperar_contrasena">Recover password</string>
     <string name="Aumentarletra">+Increase font size</string>
     <string name="Disminuirletra">-Decrease the font size</string>
+    <string-array name="parent_spinner_items">
+        <item>Opción 1</item>
+
+    </string-array>
+    <string name="Introduceingre">Introduce the ingredients</string>
+    <string name="instruccionesIngredientes">Enter the ingredients of the recipe separated by commas</string>
 
 
 </resources>

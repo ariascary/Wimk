@@ -9,21 +9,10 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
-
 import java.util.Locale;
 
-import io.grpc.internal.SharedResourceHolder;
-
-public class ConfiMain extends AppCompatActivity implements View.OnClickListener{
+public class ConfiMain extends AppCompatActivity implements View.OnClickListener {
 
     private boolean aumentarLetra = false;
 
@@ -39,7 +28,7 @@ public class ConfiMain extends AppCompatActivity implements View.OnClickListener
         btnAumentarLetra.setOnClickListener(this);
         btnDisminuirLetra.setOnClickListener(this);
 
-        Button guardar = (Button)  findViewById(R.id.registro22);
+        Button guardar = (Button) findViewById(R.id.registro22);
         guardar.setOnClickListener(view -> {
             Intent intencion = new Intent(getApplicationContext(), ArrancaApp.class);
             startActivity(intencion);
@@ -48,10 +37,10 @@ public class ConfiMain extends AppCompatActivity implements View.OnClickListener
         ((ImageButton) findViewById(R.id.imageButton20)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Resources res= ConfiMain.this.getResources();
+                Resources res = ConfiMain.this.getResources();
                 DisplayMetrics dm = res.getDisplayMetrics();
                 Configuration conf = res.getConfiguration();
-                conf.locale= new Locale("es");
+                conf.locale = new Locale("es");
                 res.updateConfiguration(conf, dm);
 
                 ConfiMain.this.recreate();
@@ -62,10 +51,10 @@ public class ConfiMain extends AppCompatActivity implements View.OnClickListener
         ((ImageButton) findViewById(R.id.imageButton23)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Resources res= ConfiMain.this.getResources();
+                Resources res = ConfiMain.this.getResources();
                 DisplayMetrics dm = res.getDisplayMetrics();
                 Configuration conf = res.getConfiguration();
-                conf.locale= new Locale("en");
+                conf.locale = new Locale("en");
                 res.updateConfiguration(conf, dm);
 
                 ConfiMain.this.recreate();
@@ -109,6 +98,6 @@ public class ConfiMain extends AppCompatActivity implements View.OnClickListener
             // Actualizar la configuración y recrear la actividad
             res.updateConfiguration(conf, dm);
             recreate();
-    }
+        }
     }
 }

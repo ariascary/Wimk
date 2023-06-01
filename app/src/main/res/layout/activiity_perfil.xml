@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/editText"
             android:layout_width="318dp"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="88dp"
             android:layout_marginEnd="84dp"
             android:background="#90CDDAEF"
@@ -40,10 +40,11 @@
             app:layout_constraintVertical_bias="0.338"
             tools:ignore="TouchTargetSizeCheck" />
 
+
         <TextView
             android:id="@+id/editText2"
             android:layout_width="318dp"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="88dp"
             android:layout_marginEnd="84dp"
             android:background="#90CDDAEF"
@@ -54,12 +55,11 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.556"
+            app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.559"
+            app:layout_constraintVertical_bias="0.561"
             tools:ignore="TouchTargetSizeCheck" />
-
 
         <TextView
             android:id="@+id/textView232"
@@ -78,8 +78,8 @@
 
         <TextView
             android:id="@+id/textInputLayout78"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
+            android:layout_width="318dp"
+            android:layout_height="24dp"
             android:layout_marginStart="88dp"
             android:layout_marginEnd="84dp"
             android:background="#90CDDAEF"
@@ -97,37 +97,37 @@
 
         <Button
             android:id="@+id/button3313"
-            android:layout_width="318dp"
-            android:layout_height="68dp"
-            android:layout_marginBottom="188dp"
+            android:layout_width="301dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="176dp"
             android:fontFamily="@font/letra"
             android:text="@string/CambiarPrefe"
             android:textAlignment="textStart"
             android:textColor="@color/darkblue"
-            android:textSize="16sp"
+            android:textSize="12sp"
             app:backgroundTint="#95CDDAEF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintHorizontal_bias="0.427"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button1662"
-            android:layout_width="319dp"
-            android:layout_height="57dp"
+            android:layout_width="303dp"
+            android:layout_height="51dp"
             android:layout_marginBottom="108dp"
             android:fontFamily="@font/letra"
             android:text="@string/ModificarRece"
             android:textAlignment="textStart"
             android:textColor="@color/darkblue"
-            android:textSize="16sp"
+            android:textSize="12sp"
             app:backgroundTint="#9ACDDAEF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintHorizontal_bias="0.431"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3313"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.833" />
 
         <ImageButton
             android:id="@+id/imageButton651"
@@ -208,7 +208,7 @@
         <TextView
             android:id="@+id/nombrePerfil"
             android:layout_width="318dp"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="88dp"
             android:layout_marginEnd="84dp"
             android:background="#90CDDAEF"

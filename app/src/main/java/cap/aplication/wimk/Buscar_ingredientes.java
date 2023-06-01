@@ -49,12 +49,6 @@ public class Buscar_ingredientes extends AppCompatActivity implements View.OnCli
             startActivity(intencion);
         });
 
-        Button filtro = (Button) findViewById(R.id.button18);
-        filtro.setOnClickListener(view -> {
-            Intent intencion = new Intent(getApplicationContext(), Filtros.class);
-            startActivity(intencion);
-        });
-
         ImageButton flecha = (ImageButton) findViewById(R.id.imageButton100);
         flecha.setOnClickListener(view -> {
             Intent intencion = new Intent(getApplicationContext(), VolverBusqueda.class);

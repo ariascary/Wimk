@@ -37,7 +37,6 @@ public class  Perfil extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activiity_perfil);
 
-
         nombre = findViewById(R.id.nombrePerfil);
         apellidos = findViewById(R.id.editText);
         nombreuserregis= findViewById(R.id.textInputLayout78);
