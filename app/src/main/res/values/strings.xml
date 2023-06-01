@@ -140,7 +140,7 @@
     <string name="Perfil">My profile</string>
     <string name="EligeIngre">Choose your ingredients</string>
     <string name="LegumPasta">Legumes/Pasta</string>
-    <string name="PonerFiltros">Put filters</string>
+    <string name="PonerFiltros">Filters:</string>
     <string name="Buscar">Search </string>
     <string name="RecetasBusqueda">Recipes according to your search</string>
     <string name="Menu">Menu </string>
@@ -151,11 +151,11 @@
     <string name="ModificarRece">Modify recipes</string>
     <string name="Duracion">Maximum duration of the cooking recipe</string>
     <string name="Kcal">how many calories does it have?</string>
-    <string name="ReceVege">Vegetarian Recipe</string>
-    <string name="ReceVega">Vegan recipe</string>
+    <string name="ReceVege">Is a vegetarian recipe?</string>
+    <string name="ReceVega">Is a vegan recipe?</string>
     <string name="ReceNormal">Neither vegetarian nor vegan recipe</string>
     <string name="PlatoPrin">It is a main dish</string>
-    <string name="Postre">It is a dessert</string>
+    <string name="Postre">Is it a dessert?</string>
     <string name="SoloPlatoPrin">Only main dish</string>
     <string name="SoloPostre">Only desserts</string>
     <string name="Ambas">Vegan and vegetarian recipes</string>

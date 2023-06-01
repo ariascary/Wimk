@@ -138,9 +138,9 @@
     <string name="Buscaringred">Buscar receta por ingredientes  </string>
     <string name="CrearRece">Crear receta </string>
     <string name="Perfil">Mi perfil </string>
-    <string name="EligeIngre">Elige tus ingredientes </string>
+    <string name="EligeIngre">Elige tus ingredientes</string>
     <string name="LegumPasta">Legumbres/Pasta </string>
-    <string name="PonerFiltros">Poner filtros </string>
+    <string name="PonerFiltros">Filtros:</string>
     <string name="Buscar">Buscar </string>
     <string name="RecetasBusqueda">Recetas según tu búsqueda </string>
     <string name="Menu">Menú </string>
@@ -151,11 +151,10 @@
     <string name="ModificarRece">Modificar recetas</string>
     <string name="Duracion">Duración máxima de la receta</string>
     <string name="Kcal">Kcal máximas</string>
-    <string name="ReceVege">Receta Vegetariana</string>
-    <string name="ReceVega">Receta Vegana</string>
+    <string name="ReceVega">¿Es una receta vegana?</string>
     <string name="ReceNormal">Receta ni vegetariana ni vegana</string>
     <string name="PlatoPrin">Es un plato principal</string>
-    <string name="Postre">Es un postre</string>
+    <string name="Postre">¿Es un postre?</string>
     <string name="SoloPlatoPrin">Solo platos principales</string>
     <string name="SoloPostre">Solo postres</string>
     <string name="Ambas">Recetas vegetarianas y veganas</string>
@@ -165,7 +164,8 @@
     <string name="Aumentarletra">+ Aumentar el tamaño de la letra</string>
     <string name="Disminuirletra">-Disminuir el tamaño de la letra</string>
     <string name="Introduceingre">Introduce los ingredientes</string>
-    <string name="instruccionesIngredientes">"Introduce los ingredientes que tenga la receta separados por comas "</string>
+    <string name="instruccionesIngredientes">Introduce los ingredientes que tenga la receta separados por comas</string>
+    <string name="ReceVege">¿Es una receta vegetariana?</string>
 
 
 </resources>

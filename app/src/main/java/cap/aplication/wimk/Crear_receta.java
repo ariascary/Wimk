@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -25,6 +26,9 @@ public class Crear_receta extends AppCompatActivity implements View.OnClickListe
         private EditText ingredientesEditText;
         private Button registroButton;
         private ImageButton backButton;
+        private CheckBox postreCheck;
+        private CheckBox veganaCheck;
+        private CheckBox vegeCheck;
 
         // Referencia a la base de datos de Firebase
         private DatabaseReference recetasRef;
@@ -42,6 +46,9 @@ public class Crear_receta extends AppCompatActivity implements View.OnClickListe
             ingredientesEditText = findViewById(R.id.multiValueEditText);
             registroButton = findViewById(R.id.registro2);
             backButton = findViewById(R.id.imageButton51);
+            postreCheck = findViewById(R.id.checkBox67);
+            veganaCheck = findViewById(R.id.checkBox70);
+            vegeCheck = findViewById(R.id.checkBox71);
 
             registroButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -50,6 +57,9 @@ public class Crear_receta extends AppCompatActivity implements View.OnClickListe
                     String nombreReceta = nombreEditText.getText().toString().trim();
                     String descripcionReceta = descripcionEditText.getText().toString().trim();
                     String ingredientes = ingredientesEditText.getText().toString().trim();
+                    boolean postre = postreCheck.isChecked();
+                    boolean vegana = veganaCheck.isChecked();
+                    boolean vegetal = vegeCheck.isChecked();
 
                     // Verificar si todos los campos están completos
                     if (nombreReceta.isEmpty() || descripcionReceta.isEmpty() || ingredientes.isEmpty()) {
@@ -59,7 +69,7 @@ public class Crear_receta extends AppCompatActivity implements View.OnClickListe
                         List<String> listaIngredientes = Arrays.asList(ingredientes.split(","));
 
                         // Guardar los datos en la base de datos de Firebase
-                        guardarRecetaEnBaseDeDatos(nombreReceta, descripcionReceta, listaIngredientes);
+                        guardarRecetaEnBaseDeDatos(nombreReceta, descripcionReceta, listaIngredientes, postre, vegana,vegetal);
                     }
                 }
             });
@@ -74,12 +84,15 @@ public class Crear_receta extends AppCompatActivity implements View.OnClickListe
             });
         }
 
-        private void guardarRecetaEnBaseDeDatos(String nombre, String descripcion, List<String> ingredientes) {
+        private void guardarRecetaEnBaseDeDatos(String nombre, String descripcion, List<String> ingredientes, boolean postre, boolean vegana,boolean vegetal) {
             // Crear un mapa con los datos de la receta
             Map<String, Object> recetaMap = new HashMap<>();
             recetaMap.put("nombre", nombre);
             recetaMap.put("descripcion", descripcion);
             recetaMap.put("ingredientes", ingredientes);
+            recetaMap.put("postre", postre);
+            recetaMap.put("vegana", vegana);
+            recetaMap.put("vegetariana", vegetal);
 
             // Generar una clave única para la receta
             String recetaKey = recetasRef.push().getKey();

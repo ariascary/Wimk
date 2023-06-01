@@ -15,7 +15,9 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fondo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton100"
@@ -31,89 +33,49 @@
         app:srcCompat="@drawable/flecha"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="404dp"
-        android:layout_height="309dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:contentDescription="@string/Lechuga"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <EditText
+        android:id="@+id/multiValueEditText"
+        android:layout_width="323dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="216dp"
+        android:background="#90CDDAEF"
+        android:fontFamily="@font/letra"
+        android:gravity="top"
+        android:hint="@string/Introduceingre"
+        android:inputType="textMultiLine"
+        android:maxLines="15"
+        android:minLines="5"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkblue"
+        android:textColorHint="@color/darkblue"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.578"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Vegetales"
-                android:textAlignment="center"
-                android:textColor="@color/darkblue"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:backgroundTint="@color/lightblue" />
-
-            <Button
-                android:id="@+id/button14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Fruta"
-                android:textAlignment="center"
-                android:textColor="@color/darkblue"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:backgroundTint="@color/lightblue" />
-
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Carnes"
-                android:textAlignment="center"
-                android:textColor="@color/darkblue"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:backgroundTint="@color/lightblue" />
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/LegumPasta"
-                android:textAlignment="center"
-                android:textColor="@color/darkblue"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:backgroundTint="@color/lightblue"
-                tools:ignore="DuplicateSpeakableTextCheck" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Otros"
-                android:textAlignment="center"
-                android:textColor="@color/darkblue"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:backgroundTint="@color/lightblue" />
-
-        </LinearLayout>
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView799"
+        android:layout_width="339dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/letra"
+        android:hint="@string/instruccionesIngredientes"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/nombrePerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_home"
-        android:layout_width="348dp"
-        android:layout_height="97dp"
+        android:layout_width="350dp"
+        android:layout_height="104dp"
         android:fontFamily="@font/letra"
         android:text="@string/EligeIngre"
         android:textAlignment="center"
@@ -124,6 +86,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.094" />
+
+    <CheckBox
+        android:id="@+id/checkBox71"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="416dp"
+        android:fontFamily="@font/letra"
+        android:inputType="textMultiLine"
+        android:lines="15"
+        android:shadowColor="@color/lightblue"
+        android:text="@string/VEgetar"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkblue"
+        android:textColorHint="@color/darkblue"
+        app:buttonIconTint="@color/lightblue"
+        app:buttonTint="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox70"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="368dp"
+        android:fontFamily="@font/letra"
+        android:inputType="textMultiLine"
+        android:lines="15"
+        android:shadowColor="@color/lightblue"
+        android:text="@string/VEgana"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkblue"
+        android:textColorHint="@color/darkblue"
+        app:buttonIconTint="@color/lightblue"
+        app:buttonTint="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView733"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/letra"
+        android:hint="@string/PonerFiltros"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/nombrePerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox67"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="316dp"
+        android:fontFamily="@font/letra"
+        android:inputType="textMultiLine"
+        android:lines="15"
+        android:shadowColor="@color/lightblue"
+        android:text="@string/Postre"
+        android:textAlignment="viewStart"
+        android:textColor="@color/darkblue"
+        android:textColorHint="@color/darkblue"
+        app:buttonIconTint="@color/lightblue"
+        app:buttonTint="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button19"
