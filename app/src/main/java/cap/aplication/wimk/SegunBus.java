@@ -3,7 +3,10 @@ package cap.aplication.wimk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +23,12 @@ import java.util.List;
 
 public class SegunBus extends AppCompatActivity implements View.OnClickListener{
 
+    private ArrayList<String> nombresRecetas = new ArrayList<>();
+    private ArrayAdapter<String> adapter;
+    private ListView listView;
+    private boolean postre;
+    private boolean vegetariano;
+    private boolean vegano;
 
 
     @Override
@@ -27,20 +36,26 @@ public class SegunBus extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segun_busqueda);
 
+        listView = (ListView) findViewById(R.id.listaIngredientes);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombresRecetas);
+        listView.setAdapter(adapter);
+
         // Obtener los ingredientes pasados como extra en el Intent
         Intent intent = getIntent();
-        List<String> listaIngredientes = intent.getStringArrayListExtra("ingredientes");
-        boolean postre = intent.getBooleanExtra("postre", false);
-        boolean vegetariano = intent.getBooleanExtra("vegetariano", false);
-        boolean vegano = intent.getBooleanExtra("vegano", false);
+        ArrayList<String> listaIngredientes = intent.getStringArrayListExtra("ingredientes");
+        postre = intent.getBooleanExtra("postre", false);
+        vegetariano = intent.getBooleanExtra("vegetariano", false);
+        vegano = intent.getBooleanExtra("vegano", false);
 
         // Realizar la búsqueda en la base de datos
         buscarRecetas((ArrayList<String>) listaIngredientes);
+
 
         ImageButton flecha = (ImageButton) findViewById(R.id.imageButton100);
         flecha.setOnClickListener(view -> {
             Intent intencion = new Intent(getApplicationContext(), Principal.class);
             startActivity(intencion);
+            finish();
         });
     }
 
@@ -51,22 +66,165 @@ public class SegunBus extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    List<String> nombresRecetas = new ArrayList<>();
+
 
                     for (DataSnapshot recetaSnapshot : dataSnapshot.getChildren()) {
-                        // Obtener los ingredientes de la receta actual
-                        List<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<List<String>>() {
-                        });
+                        boolean esPostre = recetaSnapshot.child("postre").getValue(Boolean.class);
+                        boolean esVegetariano = recetaSnapshot.child("vegetariana").getValue(Boolean.class);
+                        boolean esVegano = recetaSnapshot.child("vegana").getValue(Boolean.class);
 
-                        // Verificar si la receta contiene algún ingrediente de la lista proporcionada
-                        for (String ingrediente : ingredientesReceta) {
-                            if (listaIngredientes.contains(ingrediente)) {
-                                // La receta contiene al menos uno de los ingredientes buscados
-                                // Agregar el nombre de la receta a la lista de nombres
-                                String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
-                                nombresRecetas.add(nombreReceta);
-                                break; // Salir del bucle una vez encontrada una coincidencia
+                        if (postre == false  && vegetariano== false && vegano== false && esPostre==false) {
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
                             }
+                            listView.setAdapter(adapter);
+                        }else if (postre == false  && vegetariano== true && vegano== false && esVegetariano==true && esPostre==false){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == false  && vegetariano== false && vegano== true && esVegano==true && esPostre==false){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == true  && vegetariano== false && vegano== false &&  esPostre==true){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == true  && vegetariano== true && vegano== false && esVegetariano==true && esPostre==true){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == true  && vegetariano== false && vegano== true && esVegano==true && esPostre==true){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == false  && vegetariano== true && vegano== true && esVegetariano==true && esPostre==false && esVegano==true){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
+                        }else if (postre == true  && vegetariano== true && vegano== true && esVegetariano==true && esPostre==true && esVegano==true){
+                            // Obtener los ingredientes de la receta actual
+                            ArrayList<String> ingredientesReceta = recetaSnapshot.child("ingredientes").getValue(new GenericTypeIndicator<ArrayList<String>>() {
+                            });
+                            for (int i = 0; i < listaIngredientes.size(); i++) {
+                                // Verificar si la receta contiene algún ingrediente de la lista proporcionada
+                                for (String ingrediente : ingredientesReceta) {
+                                    if (ingrediente.toLowerCase().contains(listaIngredientes.get(i).toLowerCase())) {
+                                        // La receta contiene al menos uno de los ingredientes buscados
+                                        // Agregar el nombre de la receta a la lista de nombres
+
+                                        String nombreReceta = recetaSnapshot.child("nombre").getValue(String.class);
+                                        if (!nombresRecetas.contains(nombreReceta)) {
+                                            nombresRecetas.add(nombreReceta);
+                                        }
+                                    }
+                                }
+                            }
+                            listView.setAdapter(adapter);
                         }
                     }
 
@@ -87,16 +245,23 @@ public class SegunBus extends AppCompatActivity implements View.OnClickListener{
 
 
 
-    private void mostrarNombresRecetas(List<String> nombresRecetas) {
-        TextView receta1 = findViewById(R.id.receta1);
-        TextView receta2 = findViewById(R.id.receta2);
+    private void mostrarNombresRecetas(ArrayList<String> nombresRecetas) {
+        // Verificar si la lista de nombres de recetas no está vacía
+        if (!nombresRecetas.isEmpty()) {
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    String text = listView.getItemAtPosition(position).toString().trim();
+                    Intent intent = new Intent(SegunBus.this, Receta.class);
+                    intent.putExtra("nombreReceta", nombresRecetas.get(position)); // Aquí se pasa el nombre de la receta
+                    intent.putStringArrayListExtra("listaRecetas", nombresRecetas);
+                    startActivity(intent);
+                }
+            });
+        }else{
+            String nombreReceta = "No hay recetas para mostrar";
+            nombresRecetas.add(nombreReceta);
 
-        if (nombresRecetas.size() > 0) {
-            receta1.setText(nombresRecetas.get(0));
-        }
-
-        if (nombresRecetas.size() > 1) {
-            receta2.setText(nombresRecetas.get(1));
         }
     }
 

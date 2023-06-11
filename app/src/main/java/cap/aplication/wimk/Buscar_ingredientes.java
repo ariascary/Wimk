@@ -43,6 +43,7 @@ public class Buscar_ingredientes extends AppCompatActivity implements View.OnCli
             boolean vegetariano = vegeCheck.isChecked();
             boolean vegano = veganaCheck.isChecked();
             intencion.putStringArrayListExtra("ingredientes", (ArrayList<String>)listaIngredientes);
+            intencion.putExtra("postre", postre);
             intencion.putExtra("vegetariano", vegetariano);
             intencion.putExtra("vegano", vegano);
             startActivity(intencion);
@@ -53,6 +54,7 @@ public class Buscar_ingredientes extends AppCompatActivity implements View.OnCli
         flecha.setOnClickListener(view -> {
             Intent intencion = new Intent(getApplicationContext(), Principal.class);
             startActivity(intencion);
+            finish();
         });
 
     }

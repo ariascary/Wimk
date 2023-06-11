@@ -170,6 +170,7 @@
     </string-array>
     <string name="Introduceingre">Introduce the ingredients</string>
     <string name="instruccionesIngredientes">Enter the ingredients of the recipe separated by commas</string>
+    <string name="Solopostres">Only deserts</string>
 
 
 </resources>

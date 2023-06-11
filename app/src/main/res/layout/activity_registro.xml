@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="cap.aplication.wimk.Registro">
+    tools:context="cap.aplication.wimk.Registro"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="25dp">
 
 
     <ImageView
@@ -20,8 +22,8 @@
 
         <Button
             android:id="@+id/registro2"
-            android:layout_width="153dp"
-            android:layout_height="53dp"
+            android:layout_width="154dp"
+            android:layout_height="58dp"
             android:fontFamily="@font/letra"
             android:includeFontPadding="false"
             android:text="@string/crearperfil"
@@ -85,7 +87,7 @@
             android:id="@+id/correo"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:background="#ADCDDAEF"
             android:ems="10"
             android:fontFamily="@font/letra"
@@ -94,7 +96,7 @@
             android:textColorHint="@color/darkblue"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombreuserregis"
             tools:ignore="TextContrastCheck" />
@@ -115,10 +117,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/correo"
-            app:layout_constraintVertical_bias="0.06"
+            app:layout_constraintVertical_bias="0.094"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
         <EditText
@@ -140,7 +142,7 @@
             app:layout_constraintHorizontal_bias="0.525"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.775"
+            app:layout_constraintVertical_bias="0.733"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -148,7 +150,7 @@
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="95dp"
             android:background="#99CDDAEF"
             android:fontFamily="@font/letra"
@@ -167,7 +169,7 @@
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="95dp"
             android:background="#99CDDAEF"
             android:fontFamily="@font/letra"
@@ -186,7 +188,7 @@
             android:layout_width="313dp"
             android:layout_height="43dp"
             android:layout_marginStart="84dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="95dp"
             android:background="#99CDDAEF"
             android:fontFamily="@font/letra"
@@ -195,7 +197,7 @@
             android:textColorHint="@color/darkblue"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintHorizontal_bias="0.419"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombre"
             tools:ignore="TouchTargetSizeCheck" />

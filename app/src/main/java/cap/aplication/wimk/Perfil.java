@@ -82,11 +82,6 @@ public class  Perfil extends AppCompatActivity implements View.OnClickListener{
             startActivity(intencion);
         });
 
-        Button camPrefe = (Button) findViewById(R.id.button3313);
-        camPrefe.setOnClickListener(view -> {
-            Toast notification = Toast.makeText(Perfil.this, "Estamos trabajando en esta opción", Toast.LENGTH_SHORT);
-            notification.show();
-        });
 
         Button modifrece = (Button) findViewById(R.id.button1662);
         modifrece.setOnClickListener(view -> {

@@ -166,6 +166,7 @@
     <string name="Introduceingre">Introduce los ingredientes</string>
     <string name="instruccionesIngredientes">Introduce los ingredientes que tenga la receta separados por comas</string>
     <string name="ReceVege">¿Es una receta vegetariana?</string>
+    <string name="Solopostres">Solo postres</string>
 
 
 </resources>
