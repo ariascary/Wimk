@@ -131,9 +131,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                                     Intent i = new Intent(Registro.this, InicioSesion.class);
                                     startActivity(i);
                                     Toast.makeText(Registro.this, "Usuario almacenado correctamente", Toast.LENGTH_SHORT).show();
-
-
-                                }
+                            }
                             });
                 } else {
                     Toast.makeText(Registro.this, "No se pudo registrar", Toast.LENGTH_SHORT).show();

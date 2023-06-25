@@ -48,14 +48,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".User"
-            android:exported="true"
-            android:theme="@style/Theme.Wimk.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Receta"
             android:exported="true"
             android:theme="@style/Theme.Wimk.NoActionBar">
